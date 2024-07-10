@@ -1,4 +1,4 @@
-def call(string repositoryname, string imagename, string tagname ){
+def call(String repositoryname, String imagename, String tagname ){
     sh """
       docker build -t ${repositoryname}/${imagename} .
       docker image tag ${repositoryname}/${imagename}  ${repositoryname}/${imagename}:${tagname}
