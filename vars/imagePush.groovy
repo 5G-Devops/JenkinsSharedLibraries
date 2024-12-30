@@ -1,5 +1,5 @@
 def call(String repositoryname, String imagename, String tagname){
-    withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'PASSWORD', usernameVariable: 'USER')]) {
+    withCredentials([usernamePassword(credentialsId: 'docker-token', passwordVariable: 'PASSWORD', usernameVariable: 'USER')]) {
     sh "docker login -u '$USER' -p '$PASSWORD'"
 }
 sh """
